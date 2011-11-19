@@ -1,22 +1,20 @@
 <!doctype html>
-<html xmlns:ng="http://angularjs.org/">
+<html xmlns:ng="http://angularjs.org/" ng:controller="AppController">
 <head>
-  <meta charset="utf-8">
-  <title>my angular app</title>
-  <link rel="stylesheet" href="css/app.css"/>
+	<meta charset="utf-8">
+	<title ng:bind-template="{{title}} | Angular + RequireJS">Angular + RequireJS</title>
+	<link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+	<ul class="menu">
+		<li ng:repeat="nav in navigation">
+			<a href="#{{nav.route}}">{{nav.title}}</a>
+		</li>
+	</ul>
 
-  <ng:view></ng:view>
+	<ng:view></ng:view>
 
-  <script src="lib/angular/angular.js" ng:autobind></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/widgets.js"></script>
+	<script src="js/libs/underscore/underscore-min.js"></script>
+	<script data-main="js/bootstrap" src="js/require.js"></script>
 </body>
 </html>
