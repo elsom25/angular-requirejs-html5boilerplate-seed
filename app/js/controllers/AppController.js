@@ -7,6 +7,7 @@ define([
 	, 'controllers/HomeController'
 	, 'controllers/DataController'
 ], function (Console, _, home, data) {
+	"use strict";
 	Console.group("Entering AppController module.");
 	Console.info("HomeController", home);
 	Console.info("DataController", data);

@@ -6,6 +6,7 @@ define([
 	// Custom Services
 	, 'services/DataService'
 ], function(Console, _, ds){
+	"use strict";
 	Console.group("Entering Service module.");
 	Console.info("DataService", ds);
 

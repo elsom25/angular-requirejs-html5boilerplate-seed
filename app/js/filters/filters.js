@@ -8,6 +8,7 @@ define([
 	// Application Filters
 
 ], function (Console, $, _, angular){
+	"use strict";
 	Console.group("Entering Filters module.");
 
 	var registeredFilters = {};

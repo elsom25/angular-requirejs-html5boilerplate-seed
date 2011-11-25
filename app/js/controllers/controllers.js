@@ -6,6 +6,7 @@ define([
 	// Application Controller
 	, 'controllers/AppController' // Main Application Controller - contains routing logic
 ], function (Console, _, app){
+	"use strict";
 	Console.group("Entering controllers module.");
 	Console.info("AppController", app);
 

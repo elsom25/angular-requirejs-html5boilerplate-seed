@@ -1,4 +1,5 @@
 define(['Console'], function (Console) {
+	"use strict";
 	Console.group("Entering HomeController module.");
 	
 	var controller = function () {

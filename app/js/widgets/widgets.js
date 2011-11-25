@@ -8,6 +8,7 @@ define([
 	// Application Widgets
 
 ], function(Console, $, _, angular){
+	"use strict";
 	Console.group("Entering Widgets module.");
 
 	var registeredWidgets = {};

@@ -1,3 +1,5 @@
+"use strict";
+
 require.config({
 	paths: {
 		Console: 'libs/console/console'

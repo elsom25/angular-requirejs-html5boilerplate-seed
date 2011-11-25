@@ -10,7 +10,8 @@ define([
 	, 'widgets/widgets'
 	, 'filters/filters'
 	, 'controllers/controllers'	
-], function (Console, $, _, angular, services, widgets, filters, controllers){
+], function (Console, $, _, angular, services, widgets, filters, controllers) {
+	"use strict";
 	
 	var initialize = function () {
 		Console.group("Starting application.");

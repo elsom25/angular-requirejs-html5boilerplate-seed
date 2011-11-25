@@ -8,6 +8,7 @@ define([
 	// Application Files
 
 ], function (Console, $, _, angular){
+	"use strict";
 	Console.group("Entering BOILERPLATE module.");
 	
 
