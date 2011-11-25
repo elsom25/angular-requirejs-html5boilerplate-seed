@@ -1,0 +1,72 @@
+// Default font
+@mixin typeface {
+    font-family:'Droid Sans', arial, serif;
+}
+
+// Global transition
+@mixin global-transition {
+    @include transition(all, 150ms, ease-in-out);
+}
+
+// Inline Block + Zoom Fix
+@mixin inline-block-zoom {
+    @include inline-block;
+    zoom: 1;
+}
+
+// A new micro clearfix hack
+// http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin microfix {
+    // For modern browsers
+    &:before, &:after {
+        content:"";
+        display:table;
+    }
+
+    &:after {
+        clear:both;
+    }
+
+    @if $legacy-support-for-ie {
+        // For IE 6/7 (trigger hasLayout)
+        zoom : 1;
+    }
+}
+
+@mixin standard-link($link-color: $emphasis-color, $font-color: $base-font-color) {
+    a {
+        @include unstyled-link;
+        @include link-colors( $font-color, $link-color, $link-color, $font-color, $link-color );
+        
+        border-bottom:1px dotted; cursor:pointer;
+
+        &:hover, &:active { border-bottom:1px solid; }
+        &:active { position:relative; top:1px; }
+    }
+}
+
+@mixin standard-button($font-color, $button-color) {
+    @include button-colors(
+        $font-color
+        , $button-color
+        , darken($button-color, 20%)
+    );
+    @include button-hover-colors(
+        lighten($font-color, 5%)
+        , lighten($button-color, 5%)
+        , darken($button-color, 15%)
+    );
+    @include button-button(left);
+
+    &:active {
+        position:relative; top:1px;
+        @include button-colors(
+            $font-color
+            , darken($button-color, 5%)
+            , darken($button-color, 20%)
+        );
+    }
+    &:visited {
+        color: $font-color;
+    }
+}

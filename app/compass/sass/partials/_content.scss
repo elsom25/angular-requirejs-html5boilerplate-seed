@@ -1,0 +1,18 @@
+#main {
+	@include standard-link( $link-color );
+
+	color:$base-font-color; margin:20px auto 0; width:$width;
+
+	p { text-align:justify; margin:0 0 1em; }
+
+	table { width:100%; }
+		thead { border-bottom:solid 2px $base-font-color; text-align:left; }
+		tbody { font-size:0.9em; }
+		td, th { padding:1em; }
+		tr {
+			border-bottom:solid 1px $base-font-color;
+
+			&.status-failed { background:fade-out($emphasis-color, 0.8); }
+			&:hover, &:hover a { background:$base-font-color; color:$nav-color; }
+		}
+}

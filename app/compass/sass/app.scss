@@ -1,0 +1,17 @@
+// HTML5 Reset
+@import "modules/html5reset";
+
+// See modules/_base.scss
+@import "modules/base";
+
+// main styles
+@import "partials/globals";
+@import "partials/container";
+
+@import "partials/header";
+@import "partials/nav";
+@import "partials/content";
+@import "partials/footer";
+
+@import "partials/non-semantic";
+@import "partials/ie";

@@ -1,0 +1,12 @@
+nav { 
+	background:$nav-color; border-bottom:solid 1px darken($nav-color,  20%); border-top:solid 1px darken($nav-color,  20%); height:3em;
+
+	ul {
+		margin:6px auto; width:$width;
+
+		li a {
+			@include standard-button($base-font-color, $nav-color);
+			margin:0 0.7em 0 0;
+		}
+	}
+}

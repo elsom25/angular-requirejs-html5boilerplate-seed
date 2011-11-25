@@ -1,0 +1,11 @@
+header { 
+	color:invert($base-font-color); background:$header-color;
+
+	.content {
+		font-weight:normal; margin:0 auto 1em; width:$width;
+
+		h1, h2 { margin: 0; }
+		h1 { font-size:4em; }
+		h2 { color:$emphasis-color; font-size:2.5em; }
+	}
+}

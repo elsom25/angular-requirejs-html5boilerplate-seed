@@ -5,3 +5,5 @@ build.xml
 
 .project
 .settings
+.hg
+.hgflow

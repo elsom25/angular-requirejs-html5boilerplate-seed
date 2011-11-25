@@ -1,0 +1,5 @@
+.clearfix { @include microfix; }
+.left { float:left; }
+.right { float:right; }
+.inline-image.left { padding:0 1.2em .8em 0; }
+.inline-image.right { padding:0 0 .8em 1.2em; }
