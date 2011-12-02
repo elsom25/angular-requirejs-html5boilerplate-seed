@@ -7,3 +7,5 @@ build.xml
 .settings
 .hg
 .hgflow
+.hgignore
+.sass-cache
