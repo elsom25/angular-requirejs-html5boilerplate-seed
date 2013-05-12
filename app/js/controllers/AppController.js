@@ -1,16 +1,15 @@
 define([
-	// Standard Libs
-	'Console'		// lib/console/console
-    , 'routes/routes'
+  // Standard Libs
+  'Console'    // lib/console/console
+  , 'routes/routes'
 ], function (Console,routes) {
-	"use strict";
+  "use strict";
 
-	var appController = ['$scope',function ($scope) {
-		Console.group("AppController entered");
-        $scope.navigation = routes;
-		Console.groupEnd();// .controller
-	}];
+  var appController = ['$scope',function ($scope) {
+    Console.group("AppController entered");
+    $scope.navigation = routes;
+    Console.groupEnd();// .controller
+  }];
 
-	Console.groupEnd();
-	return appController;
+  return appController;
 });
