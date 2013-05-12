@@ -1,21 +1,20 @@
 define([
 	// Standard Libs
 	'Console'		// lib/console/console
-	, 'jQuery'		// lib/jquery/jquery
-	, 'Underscore'	// lib/underscore/underscore
-	, 'Angular'		// lib/angular/angular
-
+    ,'Underscore'
 	// Application Filters
 
-], function (Console, $, _, angular){
+], function (Console,_){
 	"use strict";
 	Console.group("Entering Filters module.");
 
-	var registeredFilters = {};
-	Console.info("Registered filters: ", registeredFilters);
+	var filters = {};
+	Console.info("Registered filters: ", filters);
 
-	var initialize = function () {
-		_.extend(angular.widget, registeredFilters);
+	var initialize = function (angModule) {
+        _.each(filters,function(filter,name){
+            angModule.filter(name,filter);
+        })
 		Console.debug("Custom filters initialized.");
 	}
 

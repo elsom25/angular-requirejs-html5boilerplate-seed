@@ -1,4 +1,4 @@
-define(['Console', 'order!libs/angular/angular-min'], function (Console) {
+define(['Console', 'order!libs/angular/angular-min', 'order!libs/angular/angular-resource'], function (Console) {
 	Console.group("Entering Angular module.");
 	Console.info("Angular: ", angular);
 

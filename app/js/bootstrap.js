@@ -6,6 +6,7 @@ require.config({
 		, jQuery: 'libs/jquery/jquery'//'http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min'
 		, Underscore: 'libs/underscore/underscore'
 		, Angular: 'libs/angular/angular'
+        , templates: './../templates'
 	}
 	, priority: [ 
 		"Console"
