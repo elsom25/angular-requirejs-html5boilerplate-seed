@@ -7,30 +7,28 @@ define([
 	
 	// Application Files
 	, 'services/services'
-	, 'widgets/widgets'
+	, 'directives/directives'
 	, 'filters/filters'
 	, 'controllers/controllers'	
-], function (Console, $, _, angular, services, widgets, filters, controllers) {
+], function (Console, $, _, angular, services, directives, filters, controllers) {
 	"use strict";
 	
 	var initialize = function () {
 		Console.group("Starting application.");
 		Console.info("Services: ", services);
-		Console.info("Widgets: ", widgets);
+		Console.info("Widgets: ", directives);
 		Console.info("Filters: ", filters);
 		Console.info("Controllers: ", controllers);
 		
 		Console.group("Setup Angular");
 
-		services.initialize();
-		widgets.initialize();
-		filters.initialize();
+        var mainModule = angular.module('myApp',['ngResource']);
+		services.initialize(mainModule);
+		directives.initialize(mainModule);
+		filters.initialize(mainModule);
+        controllers.initialize(mainModule);
 
-		var scope = angular.scope();
-		_.extend(scope, controllers);		
-		Console.debug("Controllers loaded.");
-
-		angular.compile(window.document)(scope);
+		angular.bootstrap(window.document,['myApp']);
 		Console.info("Angular compiled and executed.");
 
 		Console.groupEnd(); // [angular]

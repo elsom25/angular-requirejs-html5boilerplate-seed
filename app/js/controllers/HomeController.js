@@ -2,11 +2,8 @@ define(['Console'], function (Console) {
 	"use strict";
 	Console.group("Entering HomeController module.");
 	
-	var controller = function () {
+	var controller = function ($scope) {
 		Console.group("HomeController entered.");
-
-		var scope = this;
-
 		Console.groupEnd();
 	};
 	controller.$inject = [];

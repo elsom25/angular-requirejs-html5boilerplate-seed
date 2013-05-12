@@ -10,13 +10,15 @@ define([
 	Console.group("Entering Service module.");
 	Console.info("DataService", ds);
 
-	var registeredServices = {
+	var services = {
 		DataService: ds
 	};
-	Console.info("Registered services: ", registeredServices);
+	Console.info("Registered services: ", services);
 
-	var initialize = function () {
-		_.extend(angular.service, registeredServices);
+	var initialize = function (angModule) {
+        _.each(services,function(service,name){
+            angModule.factory(name,service);
+        })
 		Console.debug("Custom services initialized.");
 	}
 

@@ -11,11 +11,13 @@ define([
 	"use strict";
 	Console.group("Entering Widgets module.");
 
-	var registeredWidgets = {};
-	Console.info("Registered widgets: ", registeredWidgets);
+	var directives = {};
+	Console.info("Registered directives: ", directives);
 
-	var initialize = function () {
-		_.extend(angular.widget, registeredWidgets);
+	var initialize = function (angModule) {
+        _.each(directives,function(filter,name){
+            angModule.directive(name,filter);
+        })
 		Console.debug("Custom widgets initialized.");
 	}
 

@@ -10,7 +10,7 @@
 	</thead>
 
 	<tbody>
-		<tr ng:repeat="item in queue.$orderBy(orderByCol, orderByReversed)" class="status-{{creation.status}}">
+		<tr ng:repeat="item in queue | orderBy:orderByCol:orderByReversed" class="status-{{creation.status}}">
 			<td>{{item.id}}</td>
 			<td>{{item.status}}</td>
 			<td>{{item.name}}</td>
