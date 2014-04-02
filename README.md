@@ -1,3 +1,5 @@
+[Angular](http://angularjs.org/) has long updated to a point where using [RequireJs](http://requirejs.org/) is arguably a *bad* idea. I'll keep this around, but consider it *very* deprecated, and not recomended for use.
+
 # angular-requirejs-html5boilerplate-seed
 
 This project combines the application skeleton for a typical [Angular](http://angularjs.org/) web 
